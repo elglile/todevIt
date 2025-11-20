@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { servicesData } from "../Data";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import PageHeader from "../components/PageHeader";
+import WorkProcess from "../components/WorkProcess";
 
 export default function ServiceDetails() {
   const { id } = useParams();
@@ -101,58 +102,12 @@ export default function ServiceDetails() {
 
 
 {/* STEPS SECTION - Only if service has steps */}
-{service.Steps && service.Steps.length > 0 && (
-  <div className="max-w-2/3 mx-auto py-30">
-    <h3 className="text-3xl font-bold text-center mb-10 text-1-900">
-      Work Process
-    </h3>
-
-    <div className="relative">
-
-      {/* Vertical Line */}
-      <div className="absolute left-1/2 top-0 w-1 bg-gray-300 h-full -translate-x-1/2"></div>
-
-      <div className="space-y-20">
-        {service.Steps.map((step, i) => (
-          <div key={i} className="grid grid-cols-1 md:grid-cols-3 items-center gap-6 relative">
-
-            {/* LEFT TEXT */}
-            <div className="text-right pr-6 hidden md:block">
-              <p className="text-gray-700 leading-relaxed">{step.desc}</p>
-            </div>
-
-            {/* CENTER (number + line) */}
-            <div className="flex flex-col items-center relative">
-              {/* Number Circle */}
-              <div className="w-10 h-10 bg-orange-500 text-white flex items-center justify-center 
-                              rounded-full font-bold text-lg z-10">
-                {i + 1}
-              </div>
-
-              {/* Connector Line */}
-              <div className="w-1 bg-orange-500 h-full"></div>
-            </div>
-
-            {/* RIGHT CARD */}
-            <div className="flex flex-col items-start gap-3">
-              <div className="bg-white shadow-md rounded-2xl p-5 flex items-center gap-4">
-                {step.icon}
-                <h4 className="font-semibold text-lg">{step.title}</h4>
-              </div>
-
-              {/* TEXT for mobile under card */}
-              <div className="block md:hidden">
-                <p className="text-gray-700 leading-relaxed">{step.desc}</p>
-              </div>
-            </div>
-
-          </div>
-        ))}
+<section className="py-20 px-6 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+<WorkProcess />
       </div>
+    </section>
 
-    </div>
-  </div>
-)}
 
     </>
   );

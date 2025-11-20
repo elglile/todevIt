@@ -8,13 +8,17 @@ import { SiExpress, SiNextdotjs } from "react-icons/si";
 import { TbBrandJavascript } from "react-icons/tb";
 import { FiCheckCircle, FiCode, FiPenTool, FiPhoneCall, FiUsers } from "react-icons/fi";
 
+import {
+  FiSearch,
+  FiPackage,
+} from "react-icons/fi";
 
 
 export const Menu = [
-  { name: "Accueil", path: "/" },
-  { name: "À propos", path: "/about" },
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
   // { name: "Services", path: "/services" },
-  { name: "notre projet", path: "/ourprojects" },
+  { name: "Our projectss", path: "/ourprojects" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -131,35 +135,7 @@ export const servicesData = [
       { name: "Node.js", icon: <FaLaravel size={60} className=" group-hover:text-orange-600" /> },
       { name: "Node.js", icon: <TbBrandJavascript  size={60} className=" group-hover:text-yellow-600" /> },
       { name: "Node.js", icon: <RiTailwindCssFill   size={60} className=" group-hover:text-blue-600" /> },
-    ],
-Steps: [
-  {
-    title: "Reach us",
-    desc: "The first step in our collaboration process is reaching out to us.",
-    icon: <FiPhoneCall className="text-orange-500 text-4xl" />
-  },
-  {
-    title: "Meet us",
-    desc: "We schedule a detailed meeting to understand your goals.",
-    icon: <FiUsers className="text-blue-500 text-4xl" />
-  },
-  {
-    title: "Prototyping",
-    desc: "We create visuals and UI wireframes.",
-    icon: <FiPenTool className="text-purple-500 text-4xl" />
-  },
-  {
-    title: "Coding",
-    desc: "We develop the full solution using modern stacks.",
-    icon: <FiCode className="text-green-600 text-4xl" />
-  },
-  {
-    title: "Delivery",
-    desc: "We deliver, deploy, and support your project.",
-    icon: <FiCheckCircle className="text-teal-500 text-4xl" />
-  }
-]
-
+    ]
 
   },
   {
@@ -257,3 +233,77 @@ export const imgWhyChooseUs = [
     extraClass: "space-y-4 pt-8",
   },
 ];
+
+export const steps = [
+  {
+    title: "Reach us",
+    icon: <FiPhoneCall className="text-orange-500 text-3xl" />,
+    img: "https://res.cloudinary.com/dvmmezhei/image/upload/v1763633979/Contactus-pro_jhf7ae.png", // optional image
+    desc:
+      "The first step in our collaboration process is reaching out to us. Whether you have a specific project in mind or are looking for consultation, our team is ready to listen and understand your requirements.",
+  },
+
+  {
+    title: "Meet us",
+    icon: <FiUsers className="text-blue-500 text-3xl" />,
+    img: "https://res.cloudinary.com/dvmmezhei/image/upload/v1763634100/Remote_meeting-bro_ppalxd.png",
+    desc:
+      "Once you've reached out, we'll schedule a meeting to discuss your project in detail. This meeting helps us understand your goals, target audience, and the specific features you want in your software or application.",
+  },
+
+  {
+    title: "Prototyping",
+    icon: <FiPenTool className="text-purple-500 text-3xl" />,
+    img: "https://res.cloudinary.com/dvmmezhei/image/upload/v1763634495/Prototyping_process-bro_jf9ued.png",
+    desc:
+      "After understanding your project, we move to the prototyping phase. Our designers create a visual representation of your software, showcasing the layout, UI, and core functionalities.",
+  },
+
+  {
+    title: "Coding",
+    icon: <FiCode className="text-green-600 text-3xl" />,
+    img: "https://res.cloudinary.com/dvmmezhei/image/upload/v1763634616/Low_code_development-pana_diu6gv.svg",
+    desc:
+      "Once the prototype is approved, our development team starts coding your solution using modern technologies, ensuring your product is secure, scalable, and meets industry standards.",
+  },
+
+  {
+    title: "Testing",
+    icon: <FiSearch className="text-red-500 text-3xl" />,
+    img: "https://res.cloudinary.com/dvmmezhei/image/upload/v1763634739/QA_engineers-bro_rpqfcr.png",
+    desc:
+      "Quality assurance is a critical step in our workflow. Our testing team performs thorough checks to identify and fix bugs, ensuring smooth performance and reliability.",
+  },
+
+  {
+    title: "Delivery",
+    icon: <FiPackage className="text-teal-500 text-3xl" />,
+    img: "https://res.cloudinary.com/dvmmezhei/image/upload/v1763634740/Delivery_address-bro_g2vtee.png",
+    desc:
+      "The final step is delivering your customized software or application. We assist with deployment, installation, and provide full support to ensure a seamless launch.",
+  },
+];
+
+
+export const aboutData = {
+  title: "About Us",
+  text: `
+We are a modern digital agency focused on web development, UI/UX design,
+mobile applications, and digital marketing. We help businesses grow by
+creating high-quality, scalable, and user-friendly digital solutions.
+  `,
+  images: [
+    <img
+      src={assets.about1}
+      className="w-full h-40 object-cover rounded-xl shadow-1-300"
+      alt="About Image 1"
+    />,
+    <img
+      src={assets.about2}
+      className="w-full h-40 object-cover rounded-xl shadow-1-300"
+      alt="About Image 2"
+    />,
+
+  ],
+};
+

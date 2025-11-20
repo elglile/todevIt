@@ -25,7 +25,7 @@ export default function Services() {
               className="group bg-1-50/50 p-8 rounded-2xl border-2 border-1-200 
               hover:border-1-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 block"
             >
-              <div className=" bg-1-200/0 rounded-lg flex items-center justify-center mb-5 group-hover:scale-105 
+              <div className="w-[200px] h-[150px] mx-auto bg-1-200/0 rounded-lg flex items-center justify-center mb-2 group-hover:scale-105 
                         transition-transform duration-300
                         shadow shadow-1-50">
                 {service.icon}

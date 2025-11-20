@@ -1,11 +1,11 @@
 import { useLocation, Link } from "react-router-dom";
 
 const pageTitles = {
-    "/": "Accueil",
-    "/contact": "Nous contacter",
-    "/about": "À propos",
-    "/projects": "Nos Projets",
-    "/services": "Nos Services",
+    "/": "Home",
+    "/contact": "Contact",
+    "/about": "About",
+    "/projects": "Projects",
+    "/services": "Services",
 };
 
 export default function PageHeader() {

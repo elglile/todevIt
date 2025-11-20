@@ -43,7 +43,6 @@ export default function ContactForm() {
 
     return (
         <>
-            <PageHeader />
             <section className="w-4/5 md:flex md:items-center md:justify-between mx-auto py-8 my-20">
                 <div className="md:w-[145vh]">
                     <div className="flex items-center justify-start space-x-3 mb-2">
