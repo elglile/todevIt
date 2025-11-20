@@ -7,11 +7,11 @@ const Topbar = () => {
     const email = socialMedia.find((i) => i.name === "email");
     return (
         <>
-            <section className="hidden lg:flex items-center justify-center border-b border-gray-300 text-[20px] font-mono ">
+            <section className="hidden lg:flex items-center justify-center border-b border-gray-300 text-[16px] font-mono ">
                 <div>
                     <a
                         href=""
-                        className="  m-auto  py-6 flex items-center justify-center  w-full hover:text-1-900 px-8"
+                        className="  m-auto  py-4 flex items-center justify-center  w-full hover:text-1-900 px-8"
                     >
                         {email.icon}
                         <span className="transition-colors duration-400">{email.text}</span>
@@ -22,7 +22,7 @@ const Topbar = () => {
                         {phone.icon}
                         <span className="tracking-widest">{phone.text}</span>
                     </a>
-                    <div className="flex gap-4 justify-center space-x-2 ">
+                    <div className="flex gap-4 justify-center  ">
                         {socialMedia
 
                             .filter((item) => item.name !== "phone" && item.name !== "email")
@@ -32,7 +32,7 @@ const Topbar = () => {
                                     href={item.url}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className=" text-gray-800 border-2 border-gray-700 p-2 rounded-full"
+                                    className=" text-gray-800 border-2 border-gray-700 p-1.5 rounded-full"
                                 // className="flex items-center gap-2"
                                 >
                                     {item.icon}
@@ -43,7 +43,7 @@ const Topbar = () => {
                 <div>
                     <a
                         href=""
-                        className="text-1-600 font-bold text-xl text-center my-auto px-8"
+                        className="text-1-600 font-bold text-lg text-center my-auto px-8"
                     >
                         Obtenir un devis
                     </a>

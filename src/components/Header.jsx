@@ -16,17 +16,17 @@ const Header = () => {
       <Topbar />
       <header
         className='
-          flex items-center justify-between px-2
+          flex items-center justify-between px-2 py-5
           lg:flex lg:items-center  lg:justify-center'
       >
         <div className=' flex  items-center'>
         <MobileNav Menu={Menu} />
         <Link to={"/"}>
-                <img src={assets.logo} className='w-36 p-0  ' alt="" />
+                <img src={assets.logo1} className='w-20  p-0  ' alt="" />
         </Link>
         </div>
         
-        <nav className="hidden lg:flex items-center justify-between  col-span-4  px-20 text-xl font-bold space-x-6">
+        <nav className="hidden lg:flex items-center justify-between  col-span-4  px-20 text-[16px] font-bold space-x-6">
           {Menu.map((link) => {
             const isActive = location.pathname === link.path;
             return (

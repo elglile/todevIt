@@ -1,4 +1,4 @@
-import { servicesDat, servicesData } from "../Data";
+import { servicesDat } from "../Data";
 
 export default function HeroServices() {
     return (
@@ -13,11 +13,11 @@ export default function HeroServices() {
                         <div
                             key={service.id}
                             className="bg-gradient-to-br from-1-900 to-1-700/10
-                            backdrop-blur-sm border border-1-800 p-6 rounded-2xl 
+                            backdrop-blur-sm border border-1-800 p-5 rounded-2xl 
                             hover:scale-105 transition-transform duration-300"
                         >
                             {service.icon}
-                            <h3 className="font-semibold mt-2">{service.title}</h3>
+                            <h3 className="font-semibold text-[15px] mt-2">{service.title}</h3>
                             <p className="text-sm text-gray-400">{service.shortDesc}</p>
                         </div>
                     ))}
@@ -25,7 +25,7 @@ export default function HeroServices() {
 
             {/* COLUMN 2 */}
             <div className="space-y-4 pt-8">
-                {servicesData
+                {servicesDat
                     .filter((_, i) => i % 2 !== 0) // odd 1,3,5...
                     .slice(0, 1)                  // show ONLY 2 cards
                     .map((service) => (
@@ -36,7 +36,7 @@ export default function HeroServices() {
                             hover:scale-105 transition-transform duration-300"
                         >
                             {service.icon}
-                            <h3 className="font-semibold mt-2">{service.title}</h3>
+                            <h3 className="font-semibold text-[14px] mt-2">{service.title}</h3>
                             <p className="text-sm text-gray-400">{service.shortDesc}</p>
                         </div>
                     ))}
