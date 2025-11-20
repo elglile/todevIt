@@ -8,15 +8,15 @@ const About = () => {
   return (
     <>
     <PageHeader />
- <div className="w-[85%] mx-auto bg-white py-16 px-6 md:px-20 ">
+<div className="lg:w-[85%] mx-auto bg-white py-16 px-6 md:px-20 ">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
 
         {/* LEFT TEXT */}
-        <div className="flex-1">
+        <div className="flex-1 ">
           <div 
           //className=" mb-8"
           >
-            <div className="flex items-center justify-start space-x-3 mb-2 md:w-[40vh]">
+            <div className="flex items-center justify-start space-x-3 mb-2 ">
               <span className="w-10 h-1 bg-gradient-to-r from-1-700 to-1-500 rounded-full"></span>
               <span className="w-4 h-1 bg-gradient-to-r from-1-700 to-1-500 rounded-full"></span>
               <span className="w-10 h-1 bg-gradient-to-r from-1-700 to-1-500 rounded-full"></span>
@@ -32,19 +32,19 @@ const About = () => {
         </div>
 
         {/* RIGHT IMAGES */}
-        <div className="flex-1 grid grid-cols-3 gap-4">
+        <div className="space-y-2 md:flex-1 md:grid md:grid-cols-3 gap-4">
 
           {/* LEFT BIG IMAGE (column 1 spans full height) */}
-          <div className="col-span-1 row-span-1">
+          <div className="hidde lg:block md:col-span-1 md:row-span-1">
           </div>
 
           {/* RIGHT TOP SMALL IMAGE */}
-          <div className="col-span-2">
+          <div className="md:col-span-2">
             {aboutData.images[1]}
           </div>
 
           {/* RIGHT BOTTOM SMALL IMAGE */}
-          <div className="col-span-2">
+          <div className="md:col-span-2">
             {aboutData.images[0]}
           </div>
 
