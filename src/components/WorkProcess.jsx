@@ -5,11 +5,9 @@ export default function WorkProcess() {
     const [activeStep, setActiveStep] = useState(0);
     const active = steps[activeStep];
     return (
-        <div className="flex flex-col lg:flex-row items-stretch gap-8 rounded-lg bg-white p-8 shadow-md">
-
+        <div className="flex flex-row items-stretch gap-8 rounded-lg bg-white py-6 md:p-8 shadow-md">
             {/* LEFT SIDEBAR */}
-            <div className="relative flex flex-col w-full lg:w-64">
-
+            <div className="relative flex flex-col  w-20  lg:w-64">
                 {/* Main vertical line */}
                 <div className="absolute left-6 top-0 h-full w-0.5 bg-gray-300"></div>
 
@@ -18,7 +16,7 @@ export default function WorkProcess() {
                     className="absolute left-6 w-0.5 bg-1-500 transition-all duration-300"
                     style={{
                         top: `${activeStep * 78}px`,
-                        height: "78px",
+                        height: "60px",
                     }}
                 ></div>
 
@@ -33,7 +31,7 @@ export default function WorkProcess() {
                             {/* Circle icon */}
                             <div
                                 className={`flex items-center justify-center w-12 h-12 rounded-full border-2 transition-all 
-                  ${activeStep === index
+                ${activeStep === index
                                         ? "border-1-500 bg-1-100 text-1-600"
                                         : "border-gray-300 text-gray-400"
                                     }
@@ -44,8 +42,8 @@ export default function WorkProcess() {
 
                             {/* Step title */}
                             <span
-                                className={`font-medium text-sm transition-colors 
-                  ${activeStep === index ? "text-black" : "text-gray-500"}
+                                className={`font-medium text-sm transition-colors hidden lg:block
+                ${activeStep === index ? "text-black" : "text-gray-500"}
                 `}
                             >
                                 {step.title}
@@ -59,7 +57,7 @@ export default function WorkProcess() {
             <div className="hidden lg:block w-px bg-gray-300"></div>
 
             {/* RIGHT CONTENT */}
-            <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start">
+            <div className="flex-1 text-center lg:text-left flex flex-col  w-64 items-center lg:items-start">
                 {/* Big Icon */}
                 {/* Image (optional) */}
                 {active.img && (
@@ -74,9 +72,7 @@ export default function WorkProcess() {
                 <h2 className="text-2xl font-bold mb-4">{active.title}</h2>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed max-w-xl">
-                    {active.desc}
-                </p>
+                <p className="text-gray-600 leading-relaxed max-w-xl">{active.desc}</p>
             </div>
         </div>
     );
