@@ -9,8 +9,17 @@ import OurProjects from './pages/OurProjects'
 import ServiceDetails from './pages/ServiceDetails'
 import ContactForm from './pages/ContactForm'
 import Contact from './pages/Contact'
-
+import { useLocation } from 'react-router'
+import { useEffect } from 'react'
 function App() {
+        const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [pathname]);
   return (
     <>
       <Header />
