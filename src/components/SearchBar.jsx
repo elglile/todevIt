@@ -15,11 +15,11 @@ function SearchBar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  return (
+  return (<>
     <div ref={boxRef} className="relative flex items-center m-2">
       <button
         onClick={() => setOpen(!open)}
-        className={`flex items-center justify-center w-[20px] h-[20px] z-1 rounded-full  text-gray-600  transition-all duration-500 hover:bg--600 ${open && "opacity-0" }`}
+        className={`flex items-center justify-center w-[20px] h-[20px] z-1 rounded-full  text-gray-600  transition-all duration-500 hover:bg--600 ${open && "lg:opacity-0 md:opacity-0" }`}
       >
         <FaSearch size={26} className="text-1-800" />
       </button>
@@ -27,11 +27,13 @@ function SearchBar() {
 <input
         type="text"
         placeholder="Search..."
-        className={`absolute left-[-5px] h-[35px] px-4  font-mono  text-[14px] outline-none   bg-[#E5E9F0]  text-gray-500 rounded-[100px]  transition-all duration-500 ${
-          open ? "w-[220px] opacity-100" : "w-0 opacity-0"
+        className={`absolute lg:left-[-5px] md:left-[-5px] right-[-5px] h-[35px] px-4  font-mono  text-[14px] outline-none   bg-[#E5E9F0]  text-gray-500 rounded-[100px]  transition-all duration-500 ${
+          open ? "w-[220px] md:w-[200px] opacity-100" : "w-0 opacity-0"
         }`}
       />
     </div>
+    
+    </>
   );
 }
 

@@ -68,9 +68,16 @@ const Header = () => {
 
         </nav>
 
-        <div className='flex items-center justify-center '>
+        <div className='flex items-center justify-center lg:flex hidden md:flex'>
            <LanguageSwitcher />
           <SearchBar />
+         
+        </div>
+        {/* mobile version */}
+        <div className='flex items-center justify-center lg:hidden md:hidden'>
+           <SearchBar />
+           <LanguageSwitcher />
+          
          
         </div>
       </header>
