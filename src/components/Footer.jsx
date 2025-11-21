@@ -51,7 +51,7 @@ function Footer() {
                 {servicesData.map((service) => (
                   <Link
                     key={service.id}
-                    to={`/services/${service.id}`}
+                    to={`/services/${service.title.replace(/\s+/g, '-').toLowerCase()}`}
                   >
                     <h3
                       className="text-[14px] font-serif text-gray-400 hover:text-1-500 transition-colors"
