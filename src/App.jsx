@@ -11,6 +11,8 @@ import ContactForm from './pages/ContactForm'
 import Contact from './pages/Contact'
 import { useLocation } from 'react-router'
 import { useEffect } from 'react'
+import { AnimatePresence } from 'framer-motion'
+import PageTransition from './PageTransition'
 function App() {
         const { pathname } = useLocation();
 
@@ -24,15 +26,19 @@ function App() {
     <>
       <Header />
       <main className="min-h-screen">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/:title" element={<ServiceDetails />} />
+            <AnimatePresence mode="wait">
 
-          <Route path="/ourprojects" element={<OurProjects />} />
-          <Route path="/contact" element={<><Contact /></>} />
+        <Routes location={location} key={location.pathname}>
+          
+          <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+          <Route path="/about" element={<PageTransition><About /></PageTransition>} />
+          <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
+          <Route path="/services/:title" element={<PageTransition><ServiceDetails /></PageTransition>} />
+
+          <Route path="/ourprojects" element={<PageTransition><OurProjects /></PageTransition>} />
+          <Route path="/contact" element={<><PageTransition><Contact /></PageTransition></>} />
         </Routes>
+        </AnimatePresence>
       </main>
       <Footer />
     </>
