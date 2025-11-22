@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { servicesData } from "../Data";
 
 export default function MobileNav({ Menu }) {
     const [open, setOpen] = useState(false);
     const location = useLocation();
     const [aff, setaff] = useState(false);
+    const Services = servicesData.map(el => el.title);
+
     useEffect(() => {
         if (open) {
             document.body.style.overflow = "hidden"; 
@@ -78,9 +81,9 @@ export default function MobileNav({ Menu }) {
                         onClick={()=> setaff(false)}
                       >
                         {
-                            ["Web Development","Design","SEO"].map(
+                            [...Services].map(
                                 (item,i)=>(
-                        <Link to={"/"} key={i} onClick={()=>setOpen(false)}><li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">{item}</li></Link>
+                        <Link to={`/services/${item.replace(/[\s/]+/g, '-').toLowerCase()}`} key={i} onClick={()=>setOpen(false)}><li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">{item}</li></Link>
 
                                 )
                             )

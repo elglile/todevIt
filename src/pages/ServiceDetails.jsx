@@ -6,7 +6,7 @@ import WorkProcess from "../components/WorkProcess";
 
 export default function ServiceDetails() {
   const { title } = useParams();
-  const service = servicesData.find((s) => s.title.replace(/\s+/g, '-').toLowerCase() === title);
+  const service = servicesData.find((s) => s.title.replace(/[\s/]+/g, '-').toLowerCase() === title);
 
   if (!service) return <h2 className="text-center py-20">Service not found.</h2>;
 

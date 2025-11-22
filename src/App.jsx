@@ -9,7 +9,7 @@ import OurProjects from './pages/OurProjects'
 import ServiceDetails from './pages/ServiceDetails'
 import ContactForm from './pages/ContactForm'
 import Contact from './pages/Contact'
-import { useLocation } from 'react-router'
+import { Navigate, useLocation } from 'react-router'
 import { useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import PageTransition from './PageTransition'
@@ -37,6 +37,8 @@ function App() {
 
           <Route path="/ourprojects" element={<PageTransition><OurProjects /></PageTransition>} />
           <Route path="/contact" element={<><PageTransition><Contact /></PageTransition></>} />
+          <Route path="*" element={<><PageTransition><Navigate to={"/"}/></PageTransition></>} />
+
         </Routes>
         </AnimatePresence>
       </main>
