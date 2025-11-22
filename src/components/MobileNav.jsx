@@ -35,7 +35,7 @@ export default function MobileNav({ Menu }) {
 
             <div
                 className={`
-                z-100
+                z-50
                 lg:hidden 
                 fixed left-0 right-0 top-[100px]  
                 bg-white shadow-xl border-t border-1-200 

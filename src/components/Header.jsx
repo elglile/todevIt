@@ -80,7 +80,7 @@ const Header = () => {
          
         </div>
         {/* mobile version */}
-        <div className='flex items-center justify-center lg:hidden md:hidden'>
+        <div className='flex items-center justify-center lg:hidden md:hidden z-50'>
            <SearchBar />
            <LanguageSwitcher />
           

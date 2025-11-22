@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 import { servicesData } from "../Data";
 import { Link } from "react-router-dom";
-import { li } from "framer-motion/client";
 
 function SearchBar() {
   const [open, setOpen] = useState(false);
@@ -28,6 +27,7 @@ function SearchBar() {
   }, []);
 
   return (
+    
     <div ref={boxRef} className="relative flex items-center">
       {/* Search Button */}
       <button
