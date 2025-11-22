@@ -13,8 +13,11 @@ import { Navigate, useLocation } from 'react-router'
 import { useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import PageTransition from './PageTransition'
+import { motion } from "framer-motion";
+import { useScroll } from "framer-motion";
 function App() {
         const { pathname } = useLocation();
+    const { scrollYProgress } = useScroll()
 
   useEffect(() => {
     window.scrollTo({
@@ -24,6 +27,20 @@ function App() {
   }, [pathname]);
   return (
     <>
+    <motion.div
+                id="scroll-indicator"
+                style={{
+                    scaleX: scrollYProgress,
+                    position: "fixed",
+                    top: 0,
+                    zIndex: 9999,
+                    left: 0,
+                    right: 0,
+                    height: 5,
+                    originX: 0,
+                    backgroundColor: "#5527fdff",
+                }}
+            />
       <Header />
       <main className="min-h-screen">
             <AnimatePresence mode="wait">
